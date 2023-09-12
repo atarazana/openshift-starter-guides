@@ -616,9 +616,28 @@ machine AND would also not require git commit with a push. Read more in the
 <div class="paragraph">
 <p>The first step is to clone the MLB source code from GitHub to your workshop environment:</p>
 </div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If Red Hat Dev Spaces is installed you can start it and at the same time cloning the repository if you click on the Dev Spaces Icon as shown in the next picture.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mlbparks-devspaces-launch.png" alt="Template YAML edit">
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone https://github.com/openshift-roadshow/mlbparks.git</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone https://github.com/atarazana/mlbparks.git</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -699,6 +718,18 @@ mvn package</code></pre>
 </div>
 <div class="paragraph">
 <p>Pay attention to the output location for the ROOT.war, we will need that directory later.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you&#8217;re using Red Hat Dev Spaces you will be already in folder <code>mlbparks</code>, in that case you can just run <code>mvn package</code>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
