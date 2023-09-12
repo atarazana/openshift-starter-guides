@@ -616,7 +616,7 @@ your <strong>Project</strong>. You can see this with the following command:</p>
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc get template</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc get template -n %PROJECT%</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -632,7 +632,7 @@ your <strong>Project</strong>. You can see this with the following command:</p>
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc new-app mlbparks -p APPLICATION_NAME=mlbparks</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc new-app mlbparks -p APPLICATION_NAME=mlbparks -n %PROJECT%</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -771,7 +771,7 @@ resources for our <strong>mlbparks</strong> application.</p>
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc get template mlbparks -o yaml</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc get template mlbparks -o yaml -n %PROJECT%</code></pre>
 </div>
 </div>
 <div class="paragraph">
