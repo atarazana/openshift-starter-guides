@@ -591,7 +591,7 @@ control whether or not to enable the debug port. All we need to do is set an env
 </div>
 <div class="listingblock copypaste">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc set env dc/mlbparks DEBUG=true</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc set env dc/mlbparks DEBUG=true -n %PROJECT%</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -610,7 +610,7 @@ control whether or not to enable the debug port. All we need to do is set an env
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc describe svc/mlbparks</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc describe svc/mlbparks -n %PROJECT%</code></pre>
 </div>
 </div>
 <div class="listingblock console-output">
@@ -644,7 +644,7 @@ Events:            &lt;none&gt;</code></pre>
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc port-forward svc/mlbparks 8787:8787</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc port-forward -n %PROJECT% svc/mlbparks 8787:8787</code></pre>
 </div>
 </div>
 <div class="paragraph">
