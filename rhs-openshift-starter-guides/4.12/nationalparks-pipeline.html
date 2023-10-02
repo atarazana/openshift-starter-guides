@@ -784,10 +784,10 @@ Ensure you installed OpenShift Pipelines Operator before proceeding.
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: nationalparks-pipeline
+  name: nationalparks-java-pipeline
 spec:
   params:
-    - default: nationalparks
+    - default: nationalparks-java
       name: APP_NAME
       type: string
     - default: 'https://github.com/atarazana/nationalparks-java.git'
@@ -941,10 +941,10 @@ spec:
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: nationalparks-pipeline
+  name: nationalparks-dotnet-pipeline
 spec:
   params:
-    - default: nationalparks
+    - default: nationalparks-dotnet
       name: APP_NAME
       type: string
     - default: 'https://github.com/atarazana/nationalparks-dotnet.git'
@@ -1081,10 +1081,10 @@ spec:
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: nationalparks-pipeline
+  name: nationalparks-js-pipeline
 spec:
   params:
-    - default: nationalparks
+    - default: nationalparks-js
       name: APP_NAME
       type: string
     - default: 'https://github.com/atarazana/nationalparks-js.git'
@@ -1213,10 +1213,10 @@ spec:
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
-  name: nationalparks-pipeline
+  name: nationalparks-py-pipeline
 spec:
   params:
-    - default: nationalparks
+    - default: nationalparks-py
       name: APP_NAME
       type: string
     - default: 'https://github.com/atarazana/nationalparks-py.git'
@@ -1359,7 +1359,47 @@ From the <strong>Administrator Perspective</strong>, go to <strong>Storage</stro
 </div>
 </div>
 <div class="paragraph">
-<p>Inside <strong>Persistent Volume Claim name</strong> insert <strong>app-source-pvc</strong>.</p>
+<p>Inside <strong>Persistent Volume Claim name</strong> insert:</p>
+</div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset2_java"></a>Java</p>
+</li>
+<li>
+<p><a id="tabset2_net"></a>.NET</p>
+</li>
+<li>
+<p><a id="tabset2_javascript"></a>Javascript</p>
+</li>
+<li>
+<p><a id="tabset2_python"></a>Python</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset2_java">
+<div class="paragraph">
+<p><strong>app-source-pvc-java</strong></p>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset2_net">
+<div class="paragraph">
+<p><strong>app-source-pvc-dotnet</strong></p>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset2_javascript">
+<div class="paragraph">
+<p><strong>app-source-pvc-js</strong></p>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset2_python">
+<div class="paragraph">
+<p><strong>app-source-pvc-py</strong></p>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>In <strong>Size</strong> section, insert <strong>1</strong> as we are going to create 1 GiB Persistent Volume for our Pipeline, using RWO Single User access mode.</p>

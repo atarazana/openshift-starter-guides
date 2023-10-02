@@ -777,7 +777,7 @@ talk to the database using environment variables via a secret.</p>
 </div>
 <div class="listingblock console-output">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">{ ok: 1 }</code></pre>
+<pre class="highlightjs highlight"><code class="language-console hljs" data-lang="console">{ ok: 1 }</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -877,9 +877,9 @@ can verify this by looking at the output of <code>oc get rs</code>:</p>
 <div class="listingblock console-output">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">NAME                       DESIRED   CURRENT   READY   AGE
-nationalparks-58bd4758fc   0         0         0       4m58s
-nationalparks-7445576cd9   0         0         0       6m42s
-nationalparks-789c6bc4f4   1         1         1       41s
+nationalparks-...-58bd4758fc   0         0         0       4m58s
+nationalparks-...-7445576cd9   0         0         0       6m42s
+nationalparks-...-789c6bc4f4   1         1         1       41s
 parksmap-57df75c46d        1         1         1       8m24s
 parksmap-65c4f8b676        0         0         0       18m</code></pre>
 </div>
@@ -898,9 +898,52 @@ stood up a "new" instance.</p>
 <p>Now that we have a database deployed, we can again visit the <code>nationalparks</code> web
 service to query for data:</p>
 </div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_java"></a>Java</p>
+</li>
+<li>
+<p><a id="tabset1_net"></a>.NET</p>
+</li>
+<li>
+<p><a id="tabset1_javascript"></a>Javascript</p>
+</li>
+<li>
+<p><a id="tabset1_python"></a>Python</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_java">
 <div class="listingblock copypaste">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/all</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-java-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/all</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_net">
+<div class="listingblock copypaste">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-dotnet-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/all</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_javascript">
+<div class="listingblock copypaste">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-js-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/all</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_python">
+<div class="listingblock copypaste">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-py-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/all</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -919,9 +962,52 @@ application and then deployed the database. Nothing actually loaded anything
 <div class="paragraph">
 <p>The application provides an endpoint to do just that:</p>
 </div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset2_java"></a>Java</p>
+</li>
+<li>
+<p><a id="tabset2_net"></a>.NET</p>
+</li>
+<li>
+<p><a id="tabset2_javascript"></a>Javascript</p>
+</li>
+<li>
+<p><a id="tabset2_python"></a>Python</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset2_java">
 <div class="listingblock copypaste">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/load</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-java-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/load</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset2_net">
+<div class="listingblock copypaste">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-dotnet-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/load</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset2_javascript">
+<div class="listingblock copypaste">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-js-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/load</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset2_python">
+<div class="listingblock copypaste">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-none hljs">https://nationalparks-py-%PROJECT%.%CLUSTER_SUBDOMAIN%/ws/data/load</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1025,7 +1111,7 @@ labels. <code>describe</code> the <code>nationalparks</code> service:</p>
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc describe route nationalparks</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc describe route nationalparks-[java/dotnet/js/py]</code></pre>
 </div>
 </div>
 <div class="listingblock console-output">
@@ -1060,7 +1146,7 @@ Endpoints:              10.1.9.8:8080</code></pre>
 </div>
 <div class="listingblock console-input">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc label route nationalparks type=parksmap-backend</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc label route nationalparks-[java/dotnet/js/py] type=parksmap-backend</code></pre>
 </div>
 </div>
 <div class="paragraph">
