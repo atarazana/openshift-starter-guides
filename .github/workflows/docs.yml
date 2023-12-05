@@ -3,6 +3,7 @@ name: docs
 on:
   push:
     branches:
+      - ocp-4.13
       - ocp-4.12
       - ocp-4.11
       - ocp-4.9
