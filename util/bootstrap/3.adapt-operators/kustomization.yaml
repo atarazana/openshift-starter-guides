@@ -4,11 +4,8 @@ kind: Kustomization
 bases:
   - ./argocd-projects
 resources:
-  - gitops-patch.yaml
-  - gitops-rbac.yaml
+  - cluster-monitoring.yaml
   - devspaces-cluster.yaml
   - openshift-logging.yaml
-  - cluster-monitoring.yaml
-  - guide-setup-job.yaml
   - web-terminal.yaml
   

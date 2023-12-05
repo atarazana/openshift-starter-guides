@@ -19,14 +19,14 @@ spec:
   devEnvironments:
     startTimeoutSeconds: 300
     secondsOfRunBeforeIdling: -1
-    maxNumberOfWorkspacesPerUser: -1
+    maxNumberOfWorkspacesPerUser: 2
     containerBuildConfiguration:
       openShiftSecurityContextConstraint: container-build
     disableContainerBuildCapabilities: false
     defaultNamespace:
       autoProvision: true
       template: <username>-devspaces
-    secondsOfInactivityBeforeIdling: 1800
+    secondsOfInactivityBeforeIdling: 3600
     storage:
       perUserStrategyPvcConfig:
         claimSize: 3Gi
