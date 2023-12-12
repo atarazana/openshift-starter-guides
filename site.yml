@@ -19,8 +19,8 @@ asciidoc:
     experimental: true
     parksmap-version: latest
     parksmap-image: quay.io/openshiftroadshow/parksmap
-    openshift-docs-url: https://docs.openshift.com/container-platform/4.12
-    openshift-version: 4.12
+    openshift-docs-url: https://docs.openshift.com/container-platform/4.13
+    openshift-version: 4.13
     project-namespace: workshop
     release-version: roks
     roks-login-url: https://cloud.ibm.com/authorize/devcluster
